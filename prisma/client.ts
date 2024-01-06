@@ -3,12 +3,14 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const getTarget = await prisma.user.findMany({
-    include: {
-    
+  const targets = await prisma.target.findMany()
+  const users = await prisma.user.findMany()
+  const tags = await prisma.tag.findMany()
+  const target = await prisma.target.findUnique({
+    where: {
+      id: 1,
     },
   })
-  // ... you will write your Prisma Client queries here
 }
 
 main()

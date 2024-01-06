@@ -1,9 +1,11 @@
 
 
-type Props = {}
+export interface Props {
+  
+}
 
 export default function page({}: Props) {
   return (
-    <div>page</div>
+    <div>dashboard</div>
   )
 }
